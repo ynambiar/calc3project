@@ -1,0 +1,9 @@
+function [newM] = multMatrix(A,B)
+
+    [newMRow, ~] = size(A);
+    [~, newMCol] = size(B);
+    
+    newM = zeros()
+    
+
+end
