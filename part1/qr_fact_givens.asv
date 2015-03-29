@@ -1,0 +1,20 @@
+function [Q,R] = qr_fact_givens(A)
+    [numRows,numCol] = size(A);
+    i = 2;
+    j = 1;
+    newA = A;
+    while i > j & i < numRow
+        while j < numCol
+            r = sqrt(A(j,j)^2 + A(i,j)^2)
+            c = A(
+            s = 
+            G = eye(numCol)
+            G(i,i) = c;
+            G(j,j) = c;
+            G(i,j) = s;
+            G(j,i) = -s;
+            
+        end
+    end
+
+end
