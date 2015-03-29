@@ -25,23 +25,6 @@ function [Q,R,err] = qr_fact_househ(A)
         end
     end
     
-    err = norm(multMatrix(q,r)-A);
-
-end
-
-
-function [newM] = multMatrix(A,B)
-
-    [newMRow, ~] = size(A);
-    [~, newMCol] = size(B);
-    
-    newM = zeros(newMRow, newMCol);
-    for i = [1:newMRow]
-        for j = [1:newMCol]
-            aVec = A(i,:);
-            bVec = B(:,j);
-            newM(i,j) = dot(aVec, bVec);
-        end
-    end
+    err = norm(multMatrix(Q,R)-A);
 
 end
