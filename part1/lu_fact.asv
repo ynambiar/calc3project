@@ -1,5 +1,16 @@
-function [L,U] = lu_fact(file)
+function [L,U] = lu_fact(A)
 
-    
+    [numRows,numCol] = size(A);
+    j = 1;
+    i = 2;
+    L = eye(size(A));
+    U = A;
+    while j < numCol
+        while i > j & i <= numRows
+            L(i,j) = U(i,j)/U(j,j)
+            U(i,:) = -L(
+            
+        end
+    end
 
 end
