@@ -16,12 +16,11 @@ function [b] = solve_lu_b(filename)
     end
     fclose(fh);
     
-    [inputRows, inputCol] = size(inputMatrix);
+    [inputRows, inputCol] = size(inputMatrix);;
     if inputCol - 1 == inputRows
         A = inputMatrix(:,1:inputCol-1)
         B = inputMatrix(:,inputCol)
-        [L,U,err] = lu_fact(A);
-        
+        [L,U,err
     elseif inputCol == inputRows
         A = inputMatrix;
         [L,U,err] = lu_fact(A)

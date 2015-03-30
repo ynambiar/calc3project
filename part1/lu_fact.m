@@ -1,4 +1,4 @@
-function [L,U] = lu_fact(A)
+function [L,U,err] = lu_fact(A)
 
     [numRows,numCol] = size(A);
     j = 1;
@@ -14,5 +14,7 @@ function [L,U] = lu_fact(A)
         end
         j = j+1;
     end
+    
+    err = maxNorm(multMatrix(L,U)-A);
 
 end

@@ -25,6 +25,6 @@ function [Q,R,err] = qr_fact_househ(A)
         end
     end
     
-    err = norm(multMatrix(Q,R)-A);
+    err = maxNorm(multMatrix(Q,R)-A);
 
 end

@@ -1,4 +1,4 @@
-function [Q,R] = qr_fact_givens(A)
+function [Q,R,err] = qr_fact_givens(A)
     [numRows,numCol] = size(A);
     i = 2;
     j = 1;
@@ -18,15 +18,15 @@ function [Q,R] = qr_fact_givens(A)
             
             R = multMatrix(G,R)
             if 0 == size(Q)
-                Q = G'
+                Q = G';
             else
-                Q = multMatrix(Q,G')
+                Q = multMatrix(Q,G');
             end
-            i = i+1
+            i = i+1;
         end
-        j = j+1
+        j = j+1;
     end
     
-    err = norm(multMatrix(Q,R) - A)
+    err = maxNorm(multMatrix(Q,R)-A);
 
 end
