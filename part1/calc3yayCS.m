@@ -45,6 +45,7 @@ while ischar(line)
         row = [row number];
     end
     matrix = vertcat(matrix, row);
+    line = fgets(fh);
 end
 fclose(fh);
 

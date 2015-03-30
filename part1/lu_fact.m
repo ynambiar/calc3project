@@ -8,8 +8,8 @@ function [L,U] = lu_fact(A)
     while j < numCol
         i = j+1;
         while i > j & i <= numRows
-            L(i,j) = U(i,j)/U(j,j)
-            U(i,:) = U(i,:) - L(i,j) * U(j,:)
+            L(i,j) = U(i,j)/U(j,j);
+            U(i,:) = U(i,:) - L(i,j) * U(j,:);
             i = i+1;
         end
         j = j+1;
