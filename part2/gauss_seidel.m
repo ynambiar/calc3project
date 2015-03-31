@@ -1,4 +1,4 @@
-function [iterations] = gauss_seidel(A,y,x0,tol)
+function [iterations, x, doesConverge] = gauss_seidel(A,y,x0,tol)
     n = length(y);
     error = ones(n,1);
     for i = 1:n
@@ -12,7 +12,7 @@ function [iterations] = gauss_seidel(A,y,x0,tol)
     end
 
     iterations = 0;
-    while max(error) > tol
+    while max(error) > tol & iterations < 100
         iterations = iterations + 1;
         Z = x0;
         for i = 1:n
@@ -22,5 +22,12 @@ function [iterations] = gauss_seidel(A,y,x0,tol)
             xtemp(i) = [];
             x0(i) = (y(i) - sum(A(i,j) * xtemp)) / A(i,i);
         end
+    end
+    if iterations == 100
+        doesConverge = false;
+    else
+        doesConverge = true;
+    end
         error = sqrt((x0 - Z).^2);
+        x = x0;
 end
