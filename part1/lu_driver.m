@@ -19,23 +19,24 @@ function lu_driver(filename)
     %Solves and gives output
     [inputRows, inputCol] = size(inputMatrix);
     if inputCol - 1 == inputRows
-        [L,U,err] = solve_lu_b(inputMatrix);
+        [L,U,err,xsol] = solve_lu_b(inputMatrix);
         
-        sprintf('L:\n');
+        fprintf('L:\n');
         disp(L);
-        sprintf('\nU:\n');
+        fprintf('\nU:\n');
         disp(U);
-        sprintf('Error: %d',err);
-        sprintf('Xsol transposed: %s',sprintf('%d ',xsol));
+        fprintf('Xsol transposed: \n');
+        disp(xsol');
+        fprintf('Error: %d\n',err);
     elseif inputCol == inputRows
         A = inputMatrix;
-        [L,U,err] = lu_fact(A)
+        [L,U,err] = lu_fact(A);
         
-        sprintf('L:\n');
+        fprintf('L:\n');
         disp(L);
-        sprintf('\nU:\n');
+        fprintf('\nU:\n');
         disp(U);
-        sprintf('Error: %d',err);
+        fprintf('Error: %d\n',err);
         
     else
         

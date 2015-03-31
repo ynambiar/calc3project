@@ -1,34 +1,12 @@
-function [b] = solve_lu_b(filename)
+function [L,U,err,xsol] = solve_lu_b(inputMatrix)
 
-    fh = fopen(filename, 'r');
-    line = fgets(fh);
-    inputMatrix = [];
-    while ischar(line)
-        row = [];
-        rest = line;
-        for i = 1:length(line)
-            [number, rest] = strtok(rest);
-            number = str2num(number);
-            row = [row number];
-        end
-        inputMatrix = vertcat(inputMatrix, row);
-        line = fgets(fh);
-    end
-    fclose(fh);
+    [~,inputCol] = size(inputMatrix);
+    A = inputMatrix(:,1:inputCol-1);
+    b = inputMatrix(:,inputCol);
     
-    [inputRows, inputCol] = size(inputMatrix);
-    if inputCol - 1 == inputRows
-        A = inputMatrix(:,1:inputCol-1)
-        B = inputMatrix(:,inputCol)
-        [L,U,err] = lu_fact(A);
-        
-    elseif inputCol == inputRows
-        A = inputMatrix;
-        [L,U,err] = lu_fact(A)
-        
-    else
-        
-    end
+    [L,U,err] = lu_fact(A);
     
+    y = forwardSubSolve(L,b);
+    xsol = backSubSolve(U,y);
 
 end

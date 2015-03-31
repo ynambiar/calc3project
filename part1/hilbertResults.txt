@@ -1,0 +1,304 @@
+2 Results
+
+Xsol: -0.430887 1.292661 
+
+LU Results:
+Error: 0
+
+Householder Results:
+Error: 2.220446e-16
+
+Givens Results:
+Error: 1.110223e-16
+
+Solution Error: 5.551115e-17
+
+
+3 Results
+
+Xsol: 0.300000 -2.400000 3.000000 
+
+LU Results:
+Error: 0
+
+Householder Results:
+Error: 1.110223e-16
+
+Givens Results:
+Error: 2.220446e-16
+
+Solution Error: 2.498002e-16
+
+
+4 Results
+
+Xsol: -0.185664 2.784953 -8.354860 6.498224 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 2.220446e-16
+
+Givens Results:
+Error: 3.330669e-16
+
+Solution Error: 2.844947e-16
+
+
+5 Results
+
+Xsol: 0.107722 -2.585322 13.572939 -24.129669 13.572939 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 2.220446e-16
+
+Givens Results:
+Error: 5.551115e-16
+
+Solution Error: 1.353084e-16
+
+
+6 Results
+
+Xsol: -0.060000 2.100000 -16.800000 50.400000 -63.000000 27.720000 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 1.665335e-16
+
+Givens Results:
+Error: 7.771561e-16
+
+Solution Error: 1.103284e-15
+
+
+7 Results
+
+Xsol: 0.032491 -1.559574 17.545206 -77.978693 160.831054 -154.397812 55.754765 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 1.110223e-16
+
+Givens Results:
+Error: 6.661338e-16
+
+Solution Error: 1.208755e-14
+
+
+8 Results
+
+Xsol: -0.017235 1.085835 -16.287526 99.534883 -298.604648 465.823251 -362.306972 110.910298 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 2.220446e-16
+
+Givens Results:
+Error: 5.551115e-16
+
+Solution Error: 4.566703e-14
+
+
+9 Results
+
+Xsol: 0.009000 -0.719996 13.859925 -110.879455 450.447981 -1009.003843 1261.255192 -823.677078 218.789274 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 3.053113e-16
+
+Givens Results:
+Error: 7.771561e-16
+
+Solution Error: 1.824103e-13
+
+
+10 Results
+
+Xsol: -0.004640 0.459411 -11.026156 111.488975 -585.326909 1756.005192 -3121.823799 3249.277999 -1827.734874 428.731218 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 2.220446e-16
+
+Givens Results:
+Error: 6.661338e-16
+
+Solution Error: 9.293819e-14
+
+
+11 Results
+
+Xsol: 0.002355 -0.282815 8.277325 -103.056524 676.576399 -2598.912709 6138.042440 -9021.336614 8036.308316 -3969.274951 833.682837 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 2.220446e-16
+
+Givens Results:
+Error: 5.551115e-16
+
+Solution Error: 2.837360e-13
+
+
+12 Results
+
+Xsol: -0.001037 0.150984 -5.357723 81.258059 -655.982173 3146.227775 -9499.618586 18519.852738 -23261.504598 18168.876549 -8024.249763 1530.362064 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 2.775558e-16
+
+Givens Results:
+Error: 4.440892e-16
+
+Solution Error: 1.054923e-12
+
+
+13 Results
+
+Xsol: -0.000073 -0.000657 0.451755 -14.174662 184.305448 -1298.518030 5545.698766 -15166.514338 27154.312073 -31675.483821 23188.059761 -9670.796509 1752.667725 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 1.387779e-16
+
+Givens Results:
+Error: 4.440892e-16
+
+Solution Error: 1.602837e-11
+
+
+14 Results
+
+Xsol: -0.000247 0.024384 -0.417696 -1.748435 97.801098 -1019.874616 5522.992517 -18329.094022 39644.881441 -57065.612331 54254.333271 -32726.436181 11341.928481 -1718.774528 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 1.110223e-16
+
+Givens Results:
+Error: 5.551115e-16
+
+Solution Error: 5.045334e-13
+
+
+15 Results
+
+Xsol: 0.000111 -0.015866 0.548263 -7.914434 58.081610 -230.067824 446.540654 -68.790926 -1525.450793 2957.006949 -1493.760518 -2167.465543 3790.465110 -2256.279709 497.104785 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 1.110223e-16
+
+Givens Results:
+Error: 4.440892e-16
+
+Solution Error: 8.488655e-14
+
+
+16 Results
+
+Xsol: 0.000276 -0.041725 1.551100 -24.714462 208.494957 -1026.415218 3051.199676 -5325.873431 4682.194016 -1070.233140 2217.267896 -12714.860022 21945.029082 -18474.235390 7926.372622 -1395.735515 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 3.330669e-16
+
+Givens Results:
+Error: 4.440892e-16
+
+Solution Error: 8.698521e-13
+
+
+17 Results
+
+Xsol: -0.000002 0.000726 -0.041326 0.863712 -8.768797 48.633845 -151.057350 235.044309 -46.307498 -411.416716 533.912136 -190.961093 459.629048 -1569.854228 1966.326030 -1105.170726 239.168391 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 2.220446e-16
+
+Givens Results:
+Error: 8.881784e-16
+
+Solution Error: 9.165520e-14
+
+
+18 Results
+
+Xsol: 0.000001 0.000663 -0.053757 1.353560 -16.069025 105.563868 -410.454620 948.448493 -1193.638663 530.873068 183.471795 604.871470 -1583.845946 -122.240254 3159.132495 -3661.323439 1790.150990 -336.240509 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 6.661338e-16
+
+Givens Results:
+Error: 9.992007e-16
+
+Solution Error: 2.887978e-13
+
+
+19 Results
+
+Xsol: -0.000008 0.001171 -0.042556 0.656527 -5.289207 24.398044 -66.205545 102.262275 -82.757993 63.564853 -194.289534 439.710879 -587.224679 559.832987 -338.208185 -59.131643 318.388427 -233.272145 57.606444 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 2.498002e-16
+
+Givens Results:
+Error: 1.110223e-15
+
+Solution Error: 1.157886e-14
+
+
+20 Results
+
+Xsol: -0.000007 0.000995 -0.036311 0.561237 -4.505951 20.419438 -52.295147 65.985673 -11.733239 -30.412317 -126.496991 405.076784 -478.709252 341.808803 -194.061131 -56.144008 376.294027 -423.532953 205.565650 -37.785250 
+
+LU Results:
+Error: 2.775558e-17
+
+Householder Results:
+Error: 6.661338e-16
+
+Givens Results:
+Error: 1.110223e-15
+
+Solution Error: 4.280539e-15
+
+

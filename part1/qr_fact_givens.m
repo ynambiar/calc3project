@@ -14,9 +14,9 @@ function [Q,R,err] = qr_fact_givens(A)
             G(i,i) = c;
             G(j,j) = c;
             G(i,j) = s;
-            G(j,i) = -s
+            G(j,i) = -s;
             
-            R = multMatrix(G,R)
+            R = multMatrix(G,R);
             if 0 == size(Q)
                 Q = G';
             else

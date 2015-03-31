@@ -17,7 +17,7 @@ function qr_driver(filename)
     fclose(fh);
     
     %Prompt for solving method
-    prompt = 'Which method would like to use? Enter g for Givens or h for Householder.';
+    prompt = 'Which method would like to use? Enter g for Givens or h for Householder.\n';
     keepPrompt = true;
     while keepPrompt
         method = input(prompt,'s');
@@ -29,26 +29,28 @@ function qr_driver(filename)
     %Solve and output
     [inputRows, inputCol] = size(inputMatrix);
     if inputCol - 1 == inputRows
-        [Q,R,err,xsol] = solve_qr_b(inputMatrix,method)
+        [Q,R,err,xsol] = solve_qr_b(inputMatrix,method);
         
-        sprintf('Q:\n');
+        fprintf('Q:\n');
         disp(Q);
-        sprintf('\nR:\n');
+        fprintf('\nR:\n');
         disp(R);
-        sprintf('Error: %d',err);
-        sprintf('Xsol transposed: %s',sprintf('%d ',xsol));
+        fprintf('Xsol transposed: \n');
+        disp(xsol');
+        fprintf('Error: %d\n',err);
+        
     elseif inputCol == inputRows
         A = inputMatrix;
         if method == 'g'
             [Q,R,err] = qr_fact_givens(A);
-        else method == 'h'
+        elseif method == 'h'
             [Q,R,err] = qr_fact_househ(A);
         end
-        sprintf('Q:\n');
+        fprintf('\nQ:\n');
         disp(Q);
-        sprintf('\nR:\n');
+        fprintf('\nR:\n');
         disp(R);
-        sprintf('Error: %d',err);
+        fprintf('Error: %d\n',err);
     else
         
 end

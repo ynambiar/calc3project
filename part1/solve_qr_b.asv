@@ -1,0 +1,8 @@
+function [Q,R,err,xsol] = solve_qr_b(inputMatrix,method)
+
+    if method == 'g'
+        
+        
+        
+
+end
