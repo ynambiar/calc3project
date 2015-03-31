@@ -26,7 +26,8 @@ function [Q,R,err] = qr_fact_givens(A)
         end
         j = j+1;
     end
-    
+
+    multMatrix(Q,R)-A;
     err = maxNorm(multMatrix(Q,R)-A);
 
 end

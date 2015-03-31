@@ -1,20 +1,40 @@
-function [Q,R] = qr_fact_givens(A)
+function [Q,R,err] = qr_fact_givens(A)
     [numRows,numCol] = size(A);
     i = 2;
     j = 1;
-    newA = A;
-    while i > j & i < numRow
-        while j < numCol
-            r = sqrt(A(j,j)^2 + A(i,j)^2)
-            c = A(
-            s = 
-            G = eye(numCol)
+    R = A;
+    Q = [];
+    while j < numCol
+        i = j+1;
+        while i > j & i <= numRows
+            r = sqrt(R(j,j)^2 + R(i,j)^2);
+            c = R(j,j)/r;
+            s = -R(i,j)/r;
+            G = eye(numCol);
             G(i,i) = c;
             G(j,j) = c;
             G(i,j) = s;
             G(j,i) = -s;
             
+            R = multMatrix(G,R);
+            if 0 == size(Q)
+                Q = G';
+            else
+                Q = multMatrix(Q,G');
+            end
+            i = i+1;
+        end
+        j = j+1;
+    end
+    
+    
+    for i = [1:numCol-1]
+        for j = [i+1:numCol]
+            R(j,i) = 0;
         end
     end
+    
+    multMatrix(Q,R)-A
+    err = maxNorm(multMatrix(Q,R)-A);
 
 end
