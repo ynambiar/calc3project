@@ -16,6 +16,7 @@ function iterative_driver(filenameA, filenamey)
     end
     fclose(fh);
     
+    %Reads file for y
     fh = fopen(filenamey, 'r');
     line = fgets(fh);
     y = [];
@@ -54,7 +55,7 @@ function iterative_driver(filenameA, filenamey)
         [iterations, x, doesConverge] = jacobi(A,y,x0,tol); 
         if doesConverge == 1
             disp('The number of iterations to find the solution x, ')
-            disp(x);
+            disp(x');
             disp('is');
             disp(iterations);
         else

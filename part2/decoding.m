@@ -22,13 +22,15 @@ function [x] = decoding(y)
     
     %find x through iterative method
     tol = 0.00000001;
-    [iterations, x] = jacobi(A0,y0,x0',tol);
+    
+    [iterations, x] = gauss_seidel(A0,y0,x0',tol);
     n = length(x);
     for i = 1:1:n
         x(i) = mod(x(i), 2);
     end
     
     %remove bucket 0's
+    x = x';
     x = x(:, 1:n-3);
     
 end
