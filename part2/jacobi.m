@@ -22,7 +22,6 @@ function [iterations, x, doesConverge] = jacobi(A,y,x0,tol)
         x1 = z';
         
         if size(x0) ~= size(x1)
-            disp('hey')
             x0 = x0';
         end
         error = sqrt((x1 - x0).^2);

@@ -1,0 +1,7 @@
+function[vec, total_pop] = projected_population(year, A, vec)
+    numIters = (year - 2000) / 10;
+    for i = 1:numIters
+       vec = multiply_mat_vec(A, vec)';
+    end
+    total_pop = sum(vec)
+end
