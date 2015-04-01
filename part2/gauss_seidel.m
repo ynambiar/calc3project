@@ -1,17 +1,12 @@
 function [iterations, x, doesConverge] = gauss_seidel(A,y,x0,tol)
+    
+    %initialize variables
     n = length(y);
     error = ones(n,1);
-    for i = 1:n
-        j = 1:n;
-        j(i) = [];
-        B = abs(A(i,j));
-        Check(i) = abs(A(i,i)) - sum(B);
-        if Check(i) < 0
-            fprintf('The matrix is not diagonally dominant at row %2i\n\n',i)
-        end
-    end
-
+    doesConverge = 0;
     iterations = 0;
+    
+    %iterative loop, checks agains tolerance and iterations
     while max(error) > tol & iterations < 100
         iterations = iterations + 1;
         Z = x0;
@@ -21,13 +16,18 @@ function [iterations, x, doesConverge] = gauss_seidel(A,y,x0,tol)
             xtemp = x0;
             xtemp(i) = [];
             x0(i) = (y(i) - sum(A(i,j) * xtemp)) / A(i,i);
-        end
-    end
-    if iterations == 100
-        doesConverge = false;
-    else
-        doesConverge = true;
-    end
+        end  
         error = sqrt((x0 - Z).^2);
-        x = x0;
+    end
+    
+    %checks if method converges within fixed number of iterations
+    if iterations == 100
+        doesConverge = -1;
+    else
+        doesConverge = 1;
+    end
+    
+    %set new x
+    x = x0;
+    
 end
