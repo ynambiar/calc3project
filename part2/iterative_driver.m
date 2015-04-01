@@ -33,7 +33,7 @@ function iterative_driver(filenameA, filenamey)
     fclose(fh);
  
     %Prompt for solving method
-    prompt = 'Which iterative method would you like to use? Enter j for Jacobi and g for Gauss-Seidel.';
+    prompt = 'Which iterative method would you like to use? Enter j for Jacobi and g for Gauss-Seidel. ';
     keepPrompt = true;
     while keepPrompt
         method = input(prompt,'s');
@@ -52,7 +52,7 @@ function iterative_driver(filenameA, filenamey)
     tol = 0.00000001;
     if method == 'j'
         [iterations, x, doesConverge] = jacobi(A,y,x0,tol); 
-        if doesConverge
+        if doesConverge == 1
             disp('The number of iterations to find the solution x, ')
             disp(x);
             disp('is');
@@ -63,7 +63,7 @@ function iterative_driver(filenameA, filenamey)
     end
     if method =='g'
         [iterations, x, doesConverge] = gauss_seidel(A,y,x0,tol);
-        if doesConverge
+        if doesConverge == 1
             disp('The number of iterations to find the solution x, ')
             disp(x);
             disp('is');
