@@ -1,7 +1,7 @@
 function[lambda, numIters] = power_method(filename1, filename2)
 A = read_file(filename1)
 u = read_file(filename2)
-tol = 1/1000000;
+tol = 1/10000000;
 numIters = 1;
 error = 1;
 lambda = 10;
