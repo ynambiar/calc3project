@@ -6,7 +6,5 @@ Each part contains their respective source codes, explanation pdfs, and readme.t
 
 Enjoy!
 
-Yamini Nambiar
-Mona Mohebbi
-Angelo Marcelo
+Yamini Nambiar, Mona Mohebbi, Angelo Marcelo
 
