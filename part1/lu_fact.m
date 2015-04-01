@@ -15,6 +15,7 @@ function [L,U,err] = lu_fact(A)
         j = j+1;
     end
     
+    multMatrix(L,U)-A;
     err = maxNorm(multMatrix(L,U)-A);
 
 end

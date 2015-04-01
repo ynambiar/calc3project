@@ -5,10 +5,10 @@ function [Q,R,err] = qr_fact_househ(A)
     Q = [];
     for i = [1:numCol-1]
         x = R(i:end, i);
-        alph = norm(x);
+        alph = magnitude(x);
         e = eye(length(x),1);
         u = x - alph * e;
-        v = u / norm(u);
+        v = u / magnitude(u);
         newQ = eye(length(x)) - 2 * multMatrix(v,v');
         multR = eye(numCol);
         dif = numCol - length(newQ);
@@ -24,7 +24,8 @@ function [Q,R,err] = qr_fact_househ(A)
             Q = multMatrix(Q,multR');
         end
     end
-    
+
+    multMatrix(Q,R)-A;
     err = maxNorm(multMatrix(Q,R)-A);
 
 end
