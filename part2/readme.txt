@@ -1,4 +1,4 @@
-
+Angelo Marcelo, Mona Mohebbi, and Yamini Nambiar
 
 In this section there are two driver functions. cc_driver() for the convolutional codes part and iterative_driver(filename_for_A, filename_for_y).
 
@@ -55,7 +55,8 @@ The output will print out A, y, the solution, x, and the number of iterations to
        8
 
     The number of iterations to find the solution x, 
-       1.0000    2.0000
+        1.0000
+        2.0000
 
     is
        22
