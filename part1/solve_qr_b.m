@@ -1,4 +1,4 @@
-function [Q,R,err,xsol] = solve_qr_b(inputMatrix,method)
+function [Q,R,err,xsol,xsolerr] = solve_qr_b(inputMatrix,method)
 
     [~,inputCol] = size(inputMatrix);
     A = inputMatrix(:,1:inputCol-1);
@@ -11,8 +11,9 @@ function [Q,R,err,xsol] = solve_qr_b(inputMatrix,method)
     elseif method == 'h'
         [Q,R,err] = qr_fact_househ(A);
         y = multMatrix(Q',b);
-        xsol = backSubSolve(R,y);
-        
+        xsol = backSubSolve(R,y); 
     end
+    
+    xsolerr = maxNorm(multMatrix(A,XSol)-b);
 
 end

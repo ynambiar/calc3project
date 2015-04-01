@@ -1,4 +1,4 @@
-function [L,U,err,xsol] = solve_lu_b(inputMatrix)
+function [L,U,err,xsol,xsolerr] = solve_lu_b(inputMatrix)
 
     [~,inputCol] = size(inputMatrix);
     A = inputMatrix(:,1:inputCol-1);
@@ -8,5 +8,7 @@ function [L,U,err,xsol] = solve_lu_b(inputMatrix)
     
     y = forwardSubSolve(L,b);
     xsol = backSubSolve(U,y);
+    
+    xsolerr = maxNorm(multMatrix(A,XSol)-b);
 
 end

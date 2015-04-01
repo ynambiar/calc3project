@@ -19,7 +19,7 @@ function lu_driver(filename)
     %Solves and gives output
     [inputRows, inputCol] = size(inputMatrix);
     if inputCol - 1 == inputRows
-        [L,U,err,xsol] = solve_lu_b(inputMatrix);
+        [L,U,err,xsol,xsolerr] = solve_lu_b(inputMatrix);
         
         fprintf('L:\n');
         disp(L);
@@ -28,6 +28,8 @@ function lu_driver(filename)
         fprintf('Xsol transposed: \n');
         disp(xsol');
         fprintf('Error: %d\n',err);
+        fprintf('Solution error: %d\n',xsolerr);
+        
     elseif inputCol == inputRows
         A = inputMatrix;
         [L,U,err] = lu_fact(A);

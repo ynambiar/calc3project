@@ -29,7 +29,7 @@ function qr_driver(filename)
     %Solve and output
     [inputRows, inputCol] = size(inputMatrix);
     if inputCol - 1 == inputRows
-        [Q,R,err,xsol] = solve_qr_b(inputMatrix,method);
+        [Q,R,err,xsol,xsolerr] = solve_qr_b(inputMatrix,method);
         
         fprintf('Q:\n');
         disp(Q);
@@ -38,6 +38,7 @@ function qr_driver(filename)
         fprintf('Xsol transposed: \n');
         disp(xsol');
         fprintf('Error: %d\n',err);
+        fprintf('Solution error: %d\n',xsolerr);
         
     elseif inputCol == inputRows
         A = inputMatrix;

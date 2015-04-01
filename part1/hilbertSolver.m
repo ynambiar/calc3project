@@ -5,12 +5,9 @@ function hilbertSolver(n)
         [H,b] = hilbertMaker(i);
         input = horzcat(H,b);
         
-        [~,~,LUerr,LUxsol] = solve_lu_b(input);
-        [~,~,houseErr,houseXSol] = solve_qr_b(input,'h');
-        [~,~,givensErr,givensXSol] = solve_qr_b(input,'g');
-        solErrLU = maxNorm(multMatrix(H,LUxsol)-b);
-        solErrHouse = maxNorm(multMatrix(H,houseXSol)-b);
-        solErrGivens = maxNorm(multMatrix(H,givensXSol)-b);
+        [~,~,LUerr,LUxsol,solErrLU] = solve_lu_b(input);
+        [~,~,houseErr,houseXSol,solErrHouse] = solve_qr_b(input,'h');
+        [~,~,givensErr,givensXSol,solErrGivens] = solve_qr_b(input,'g');
         fprintf(fid,'%d Results\n\n',i);
         fprintf(fid,'Xsol: ');
         fprintf(fid,'%f ',LUxsol);
